@@ -1,0 +1,123 @@
+{
+  "tool": "Course portal \u00b7 Week 4 \u00b7 3. Simulation \u00b7 'Direct Preference Optimization & Activation Steering Lab' (dlearn-cai.web.app)",
+  "date": "2026-11-01",
+  "tested_by": "Squadron Shannon",
+  "dpo": [
+    {
+      "beta": 0.1,
+      "pi_w": -12.4,
+      "pi_l": -18.2,
+      "ref_w": -15.1,
+      "ref_l": -14.8,
+      "shown": {
+        "p_win": 0.648,
+        "margin": 0.61,
+        "loss": 0.434,
+        "grad_scale": 0.0352,
+        "r_w": 0.27,
+        "r_l": -0.34
+      },
+      "screenshot": "01_dpo_beta0.10_default.jpg",
+      "ours": {
+        "p_win": 0.6479408020806503,
+        "margin": 0.6099999999999999,
+        "loss": 0.4339559416167789,
+        "grad_scale": 0.035205919791934985,
+        "r_w": 0.26999999999999996,
+        "r_l": -0.33999999999999986
+      },
+      "match": {
+        "p_win": true,
+        "margin": true,
+        "loss": true,
+        "grad_scale": true,
+        "r_w": true,
+        "r_l": true
+      }
+    },
+    {
+      "beta": 0.14,
+      "pi_w": -12.4,
+      "pi_l": -18.2,
+      "ref_w": -15.1,
+      "ref_l": -14.8,
+      "shown": {
+        "p_win": 0.701,
+        "margin": 0.854,
+        "loss": 0.3547,
+        "grad_scale": 0.0418,
+        "r_w": 0.378,
+        "r_l": -0.476
+      },
+      "screenshot": "02_dpo_beta0.14.jpg",
+      "ours": {
+        "p_win": 0.7014055600054885,
+        "margin": 0.8539999999999999,
+        "loss": 0.3546690142965163,
+        "grad_scale": 0.04180322159923162,
+        "r_w": 0.37799999999999995,
+        "r_l": -0.47599999999999987
+      },
+      "match": {
+        "p_win": true,
+        "margin": true,
+        "loss": true,
+        "grad_scale": true,
+        "r_w": true,
+        "r_l": true
+      }
+    }
+  ],
+  "simpo": {
+    "gamma": 0.8,
+    "beta": 2.0,
+    "len_w": 64,
+    "len_l": 240,
+    "avg_w": -0.18,
+    "avg_l": -0.32,
+    "shown": {
+      "sum_w": -11.5,
+      "sum_l": -76.8,
+      "raw_difference": 65.3,
+      "r_w": -0.36,
+      "r_l": -0.64,
+      "margin_gap": -0.52,
+      "p_win": 0.373,
+      "loss": 0.9866
+    },
+    "screenshot": "03_simpo_gamma0.80_beta2.0.jpg",
+    "ours": {
+      "sum_w": -11.52,
+      "sum_l": -76.8,
+      "raw_difference": 65.28,
+      "r_w": -0.36,
+      "r_l": -0.64,
+      "margin_gap": -0.52,
+      "p_win": 0.3728522336868044,
+      "loss": 0.986573094164618
+    },
+    "match": {
+      "sum_w": true,
+      "sum_l": true,
+      "raw_difference": true,
+      "r_w": true,
+      "r_l": true,
+      "margin_gap": true,
+      "p_win": true,
+      "loss": true
+    },
+    "note": "With gamma = 0.80 the portal's own example gives P = 37 %: the concise answer IS better per token (reward gap 0.28), but the gap is smaller than the target margin, so SimPO keeps pushing."
+  },
+  "steering": {
+    "portal_claims": {
+      "layer": "Layer 16 of 32 (middle layers 14-22 work best)",
+      "cost": "zero additional floating-point operations during decoding"
+    },
+    "screenshot": "04_steering_layer16of32_alpha1.2.jpg",
+    "ours": {
+      "chosen_layer": "16 of 24 (67% depth; portal 16 of 32 = 50 %, range 44-69 %)",
+      "extra_flops_per_token": "896 additions (one vector add) vs ~9.9e+08 FLOPs per token forward = 9.1e-07 of the cost: not zero, but negligible"
+    }
+  },
+  "all_numeric_values_match": true
+}

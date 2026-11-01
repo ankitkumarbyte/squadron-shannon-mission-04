@@ -1,0 +1,8 @@
+torch>=2.4            # pure PyTorch: CPU, CUDA or Apple MPS
+numpy>=1.26
+matplotlib>=3.8       # training curves, reliability diagram, alignment-tax plot
+transformers>=4.45    # Part 4 only: loads Qwen/Qwen2.5-0.5B-Instruct (~1 GB, downloaded once from Hugging Face)
+pytest>=8.0
+ipykernel>=6.29       # to run ps04_solution.ipynb
+nbformat>=5.10
+nbconvert>=7.16

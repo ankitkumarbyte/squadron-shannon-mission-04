@@ -1,0 +1,318 @@
+{
+  "gather": {
+    "max_abs_diff_sum_vs_loop": 1.4210854715202004e-14,
+    "max_abs_diff_avg_vs_loop": 1.7763568394002505e-15,
+    "max_abs_diff_extra_padding": 1.4210854715202004e-14
+  },
+  "stability": [
+    {
+      "logit": 0.0,
+      "naive_-log(sigmoid)": 0.6931471824645996,
+      "logsigmoid": 0.6931471824645996,
+      "exact": 0.6931471805599453
+    },
+    {
+      "logit": 20.0,
+      "naive_-log(sigmoid)": -0.0,
+      "logsigmoid": 2.06115369216775e-09,
+      "exact": 2.061153620314381e-09
+    },
+    {
+      "logit": -20.0,
+      "naive_-log(sigmoid)": 20.0,
+      "logsigmoid": 20.0,
+      "exact": 20.000000002061153
+    },
+    {
+      "logit": -100.0,
+      "naive_-log(sigmoid)": Infinity,
+      "logsigmoid": 100.0,
+      "exact": 100.0
+    },
+    {
+      "logit": -200.0,
+      "naive_-log(sigmoid)": Infinity,
+      "logsigmoid": 200.0,
+      "exact": 200.0
+    },
+    {
+      "logit": -1000.0,
+      "naive_-log(sigmoid)": Infinity,
+      "logsigmoid": 1000.0,
+      "exact": 1000.0
+    }
+  ],
+  "gradient": {
+    "max_abs_diff_grad_chosen": 1.734723475976807e-18,
+    "max_abs_diff_grad_rejected": 1.734723475976807e-18
+  },
+  "frozen_reference": {
+    "loss_at_init": 0.6931471824645996,
+    "log_2": 0.6931471805599453,
+    "margin_at_init": 1.7881394143159923e-08,
+    "policy_params_with_grad": 29,
+    "policy_params_total": 29,
+    "policy_grad_norm": 0.3272753357887268,
+    "ref_params_with_grad": 0,
+    "ref_max_abs_change_after_step": 0.0,
+    "policy_max_abs_change_after_step": 0.0027000210247933865
+  },
+  "before_dpo": {
+    "accuracy_vs_annotator_labels": 0.5,
+    "accuracy_vs_true_reward": 0.5,
+    "mean_margin": 0.0,
+    "mean_true_reward": 1.6792883597883597,
+    "mean_length": 5.276666666666666
+  },
+  "after_dpo": {
+    "accuracy_vs_annotator_labels": 0.7994999885559082,
+    "accuracy_vs_true_reward": 0.8748696446418762,
+    "mean_margin": 1.1054420471191406,
+    "mean_true_reward": 2.8061560846560845,
+    "mean_length": 7.92
+  },
+  "training_log": [
+    {
+      "step": 0,
+      "loss": 0.6931471824645996,
+      "reward_accuracy": 0.34375,
+      "reward_margin": 3.278255888972126e-08,
+      "chosen_rewards": 3.1292437085994607e-08,
+      "rejected_rewards": -1.4901164746561335e-09,
+      "bt_probability": 0.5
+    },
+    {
+      "step": 10,
+      "loss": 0.6374634504318237,
+      "reward_accuracy": 0.828125,
+      "reward_margin": 0.1191428154706955,
+      "chosen_rewards": 0.00795822311192751,
+      "rejected_rewards": -0.11118459701538086,
+      "bt_probability": 0.5296046733856201
+    },
+    {
+      "step": 20,
+      "loss": 0.5629900097846985,
+      "reward_accuracy": 0.84375,
+      "reward_margin": 0.3056381642818451,
+      "chosen_rewards": -0.09039273858070374,
+      "rejected_rewards": -0.39603087306022644,
+      "bt_probability": 0.5741159915924072
+    },
+    {
+      "step": 30,
+      "loss": 0.5687335133552551,
+      "reward_accuracy": 0.8125,
+      "reward_margin": 0.30926230549812317,
+      "chosen_rewards": -0.11734583228826523,
+      "rejected_rewards": -0.426608145236969,
+      "bt_probability": 0.5741172432899475
+    },
+    {
+      "step": 40,
+      "loss": 0.47437161207199097,
+      "reward_accuracy": 0.875,
+      "reward_margin": 0.5822770595550537,
+      "chosen_rewards": -0.12592913210391998,
+      "rejected_rewards": -0.7082061767578125,
+      "bt_probability": 0.6322206854820251
+    },
+    {
+      "step": 50,
+      "loss": 0.5173893570899963,
+      "reward_accuracy": 0.828125,
+      "reward_margin": 0.4982054829597473,
+      "chosen_rewards": -0.17582082748413086,
+      "rejected_rewards": -0.6740262508392334,
+      "bt_probability": 0.610399067401886
+    },
+    {
+      "step": 60,
+      "loss": 0.45589685440063477,
+      "reward_accuracy": 0.890625,
+      "reward_margin": 0.6369853019714355,
+      "chosen_rewards": -0.1853717714548111,
+      "rejected_rewards": -0.8223571181297302,
+      "bt_probability": 0.6438990831375122
+    },
+    {
+      "step": 70,
+      "loss": 0.45920881628990173,
+      "reward_accuracy": 0.859375,
+      "reward_margin": 0.660184383392334,
+      "chosen_rewards": -0.20634013414382935,
+      "rejected_rewards": -0.8665245771408081,
+      "bt_probability": 0.6464736461639404
+    },
+    {
+      "step": 80,
+      "loss": 0.5036377906799316,
+      "reward_accuracy": 0.765625,
+      "reward_margin": 0.5872821807861328,
+      "chosen_rewards": -0.29543665051460266,
+      "rejected_rewards": -0.8827188611030579,
+      "bt_probability": 0.6239683628082275
+    },
+    {
+      "step": 90,
+      "loss": 0.4351732134819031,
+      "reward_accuracy": 0.828125,
+      "reward_margin": 0.8155575394630432,
+      "chosen_rewards": -0.3851619362831116,
+      "rejected_rewards": -1.2007195949554443,
+      "bt_probability": 0.6686806678771973
+    },
+    {
+      "step": 100,
+      "loss": 0.5190049409866333,
+      "reward_accuracy": 0.734375,
+      "reward_margin": 0.6240813136100769,
+      "chosen_rewards": -0.5310189127922058,
+      "rejected_rewards": -1.1551002264022827,
+      "bt_probability": 0.631698489189148
+    },
+    {
+      "step": 110,
+      "loss": 0.43915799260139465,
+      "reward_accuracy": 0.796875,
+      "reward_margin": 0.7977521419525146,
+      "chosen_rewards": -0.4259130358695984,
+      "rejected_rewards": -1.2236651182174683,
+      "bt_probability": 0.6654742956161499
+    },
+    {
+      "step": 120,
+      "loss": 0.4041317105293274,
+      "reward_accuracy": 0.859375,
+      "reward_margin": 0.9250655770301819,
+      "chosen_rewards": -0.40492165088653564,
+      "rejected_rewards": -1.3299872875213623,
+      "bt_probability": 0.692025363445282
+    },
+    {
+      "step": 130,
+      "loss": 0.4236818552017212,
+      "reward_accuracy": 0.84375,
+      "reward_margin": 0.8566755056381226,
+      "chosen_rewards": -0.6100212335586548,
+      "rejected_rewards": -1.4666967391967773,
+      "bt_probability": 0.6758872270584106
+    },
+    {
+      "step": 140,
+      "loss": 0.44017064571380615,
+      "reward_accuracy": 0.8125,
+      "reward_margin": 0.9261770248413086,
+      "chosen_rewards": -0.476757675409317,
+      "rejected_rewards": -1.4029347896575928,
+      "bt_probability": 0.6753857731819153
+    },
+    {
+      "step": 150,
+      "loss": 0.40564680099487305,
+      "reward_accuracy": 0.84375,
+      "reward_margin": 1.0099960565567017,
+      "chosen_rewards": -0.6714639663696289,
+      "rejected_rewards": -1.681459903717041,
+      "bt_probability": 0.6955538988113403
+    },
+    {
+      "step": 160,
+      "loss": 0.3429518938064575,
+      "reward_accuracy": 0.875,
+      "reward_margin": 1.2923903465270996,
+      "chosen_rewards": -0.5450212955474854,
+      "rejected_rewards": -1.837411642074585,
+      "bt_probability": 0.738793134689331
+    },
+    {
+      "step": 170,
+      "loss": 0.3868924379348755,
+      "reward_accuracy": 0.84375,
+      "reward_margin": 1.10609769821167,
+      "chosen_rewards": -0.577695369720459,
+      "rejected_rewards": -1.683793306350708,
+      "bt_probability": 0.707369327545166
+    },
+    {
+      "step": 180,
+      "loss": 0.3935397267341614,
+      "reward_accuracy": 0.796875,
+      "reward_margin": 1.0502378940582275,
+      "chosen_rewards": -0.7855205535888672,
+      "rejected_rewards": -1.8357584476470947,
+      "bt_probability": 0.7004755735397339
+    },
+    {
+      "step": 190,
+      "loss": 0.35248762369155884,
+      "reward_accuracy": 0.84375,
+      "reward_margin": 1.266761064529419,
+      "chosen_rewards": -0.6629970669746399,
+      "rejected_rewards": -1.929758071899414,
+      "bt_probability": 0.7305080890655518
+    },
+    {
+      "step": 200,
+      "loss": 0.4683237075805664,
+      "reward_accuracy": 0.796875,
+      "reward_margin": 0.8407033681869507,
+      "chosen_rewards": -0.8264271020889282,
+      "rejected_rewards": -1.6671305894851685,
+      "bt_probability": 0.6595690250396729
+    },
+    {
+      "step": 210,
+      "loss": 0.3857159912586212,
+      "reward_accuracy": 0.90625,
+      "reward_margin": 0.9884304404258728,
+      "chosen_rewards": -0.8199820518493652,
+      "rejected_rewards": -1.8084125518798828,
+      "bt_probability": 0.69931960105896
+    },
+    {
+      "step": 220,
+      "loss": 0.3650035262107849,
+      "reward_accuracy": 0.84375,
+      "reward_margin": 1.2885551452636719,
+      "chosen_rewards": -0.7927564382553101,
+      "rejected_rewards": -2.0813117027282715,
+      "bt_probability": 0.7298941612243652
+    },
+    {
+      "step": 230,
+      "loss": 0.369046688079834,
+      "reward_accuracy": 0.84375,
+      "reward_margin": 1.2202626466751099,
+      "chosen_rewards": -1.0281801223754883,
+      "rejected_rewards": -2.2484426498413086,
+      "bt_probability": 0.7229397296905518
+    },
+    {
+      "step": 240,
+      "loss": 0.35468506813049316,
+      "reward_accuracy": 0.859375,
+      "reward_margin": 1.2927325963974,
+      "chosen_rewards": -0.9467241764068604,
+      "rejected_rewards": -2.2394566535949707,
+      "bt_probability": 0.7348068356513977
+    },
+    {
+      "step": 250,
+      "loss": 0.3920350670814514,
+      "reward_accuracy": 0.859375,
+      "reward_margin": 1.1765103340148926,
+      "chosen_rewards": -0.9105637073516846,
+      "rejected_rewards": -2.087074041366577,
+      "bt_probability": 0.7132666707038879
+    }
+  ],
+  "n_train": 4000,
+  "n_test": 2000,
+  "meta": {
+    "torch": "2.12.1",
+    "machine": "arm64",
+    "python": "3.13.9"
+  },
+  "all_passed": true
+}

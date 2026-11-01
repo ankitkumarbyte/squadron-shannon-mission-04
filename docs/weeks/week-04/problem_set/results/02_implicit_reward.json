@@ -1,0 +1,113 @@
+{
+  "beta": 0.1,
+  "n_test": 2000,
+  "pairwise_accuracy_labels": 0.7994999885559082,
+  "pairwise_accuracy_true_reward": 0.8748696446418762,
+  "annotator_ceiling": 0.8662486048570629,
+  "accuracy_by_difficulty": [
+    {
+      "range": "(0.0, 0.25]",
+      "count": 238,
+      "accuracy": 0.680672287940979
+    },
+    {
+      "range": "(0.25, 0.50]",
+      "count": 293,
+      "accuracy": 0.744027316570282
+    },
+    {
+      "range": "(0.5, 1.00]",
+      "count": 504,
+      "accuracy": 0.8571428656578064
+    },
+    {
+      "range": "(1.0, 3.01]",
+      "count": 883,
+      "accuracy": 0.9807474613189697
+    }
+  ],
+  "temperature": 0.7007721066474915,
+  "calibration": {
+    "DPO implicit reward (raw)": {
+      "ece": 0.04406958412192764,
+      "brier": 0.14277608692646027,
+      "nll": 0.440816730260849,
+      "accuracy": 0.7950000166893005
+    },
+    "temperature-scaled (T = 0.70)": {
+      "ece": 0.017953202598495414,
+      "brier": 0.14057974517345428,
+      "nll": 0.43245622515678406,
+      "accuracy": 0.7950000166893005
+    },
+    "oracle annotator P (true BT)": {
+      "ece": 0.024879634004319105,
+      "brier": 0.08975028991699219,
+      "nll": 0.29204845428466797,
+      "accuracy": 0.875
+    }
+  },
+  "reliability_raw": [
+    {
+      "bin": "[0.0, 0.1)",
+      "count": 102,
+      "avg_predicted_prob": 0.05815885718181437,
+      "empirical_rate": 0.029411764705882353
+    },
+    {
+      "bin": "[0.1, 0.2)",
+      "count": 103,
+      "avg_predicted_prob": 0.1485343500248437,
+      "empirical_rate": 0.1262135922330097
+    },
+    {
+      "bin": "[0.2, 0.3)",
+      "count": 82,
+      "avg_predicted_prob": 0.24848693718270556,
+      "empirical_rate": 0.18292682926829268
+    },
+    {
+      "bin": "[0.3, 0.4)",
+      "count": 101,
+      "avg_predicted_prob": 0.35189247396912904,
+      "empirical_rate": 0.32673267326732675
+    },
+    {
+      "bin": "[0.4, 0.5)",
+      "count": 93,
+      "avg_predicted_prob": 0.450160260802956,
+      "empirical_rate": 0.45161290322580644
+    },
+    {
+      "bin": "[0.5, 0.6)",
+      "count": 101,
+      "avg_predicted_prob": 0.5472065151327907,
+      "empirical_rate": 0.5445544554455446
+    },
+    {
+      "bin": "[0.6, 0.7)",
+      "count": 102,
+      "avg_predicted_prob": 0.6498870802860633,
+      "empirical_rate": 0.7156862745098039
+    },
+    {
+      "bin": "[0.7, 0.8)",
+      "count": 106,
+      "avg_predicted_prob": 0.7464783309765581,
+      "empirical_rate": 0.8773584905660378
+    },
+    {
+      "bin": "[0.8, 0.9)",
+      "count": 95,
+      "avg_predicted_prob": 0.851129234464545,
+      "empirical_rate": 0.8947368421052632
+    },
+    {
+      "bin": "[0.9, 1.0)",
+      "count": 115,
+      "avg_predicted_prob": 0.9409497157387111,
+      "empirical_rate": 0.991304347826087
+    }
+  ],
+  "all_passed": true
+}

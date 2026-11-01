@@ -1,0 +1,110 @@
+{
+  "length_bias_lambda": 0.35,
+  "dataset": {
+    "clean": {
+      "chosen_is_longer": 0.5622377622377622,
+      "mean_len_chosen": 6.275,
+      "mean_len_rejected": 5.7645,
+      "chosen_truly_better": 0.8868517548454689,
+      "pearson_lendiff_truediff": 0.1000043550457251
+    },
+    "verbose": {
+      "chosen_is_longer": 0.6542657342657343,
+      "mean_len_chosen": 6.62575,
+      "mean_len_rejected": 5.41375,
+      "chosen_truly_better": 0.8648507071765322,
+      "pearson_lendiff_truediff": -0.10854837296109718
+    }
+  },
+  "methods": {
+    "DPO (clean labels)": {
+      "r_len": -0.08716508026997673,
+      "accuracy_true_reward": 0.8748696446418762,
+      "sampled_length": 7.92,
+      "sampled_true_reward": 2.8061560846560845,
+      "ref_length": 5.276666666666666,
+      "ref_true_reward": 1.6792883597883597
+    },
+    "DPO (verbose labels)": {
+      "r_len": 0.2505809708515097,
+      "accuracy_true_reward": 0.8576642274856567,
+      "sampled_length": 9.03,
+      "sampled_true_reward": 2.8202354497354496,
+      "ref_length": 5.276666666666666,
+      "ref_true_reward": 1.6792883597883597
+    },
+    "SimPO (clean labels)": {
+      "r_len": 0.12788969445680212,
+      "accuracy_true_reward": 0.9191866517066956,
+      "sampled_length": 8.266666666666667,
+      "sampled_true_reward": 2.5987431457431454,
+      "ref_length": 5.276666666666666,
+      "ref_true_reward": 1.6792883597883597
+    },
+    "SimPO (verbose labels)": {
+      "r_len": 0.4747382132336037,
+      "accuracy_true_reward": 0.8847758173942566,
+      "sampled_length": 9.383333333333333,
+      "sampled_true_reward": 2.63955266955267,
+      "ref_length": 5.276666666666666,
+      "ref_true_reward": 1.6792883597883597
+    },
+    "R-DPO (verbose labels)": {
+      "r_len": -0.4352522416181117,
+      "accuracy_true_reward": 0.8514077067375183,
+      "sampled_length": 7.526666666666666,
+      "sampled_true_reward": 2.812243386243386,
+      "ref_length": 5.276666666666666,
+      "ref_true_reward": 1.6792883597883597
+    }
+  },
+  "simpo_unit_check": {
+    "loss": 0.6731817722320557,
+    "exact": 0.6731817722320557
+  },
+  "vram_device": "mps",
+  "vram_config": {
+    "d": 768,
+    "layers": 12,
+    "vocab": 32000,
+    "seq": 256,
+    "batch": 4
+  },
+  "vram_measured": {
+    "dpo": {
+      "method": "dpo",
+      "params_per_model": 134404608,
+      "peak_sampled_mb": 3900.631591796875,
+      "weights_mb": 1025.45703125,
+      "policy_forward_mb": 3234.843994140625,
+      "reference_forward_mb": 3234.851806640625,
+      "backward_mb": 2159.645263671875,
+      "optimizer_step_mb": 3900.631591796875,
+      "steady_state_mb": 3900.631591796875
+    },
+    "simpo": {
+      "method": "simpo",
+      "params_per_model": 134404608,
+      "peak_sampled_mb": 3198.89697265625,
+      "weights_mb": 512.744140625,
+      "policy_forward_mb": 2722.140625,
+      "backward_mb": 1487.91064453125,
+      "optimizer_step_mb": 3198.89697265625,
+      "steady_state_mb": 3198.89697265625
+    },
+    "model_weight_saving_percent": 49.9984762891546,
+    "peak_saving_percent": 17.99028189733145
+  },
+  "vram_analytic_7b": {
+    "weights_gb": 13.0385160446167,
+    "grads_gb": 13.0385160446167,
+    "adam_gb": 52.1540641784668,
+    "activations_gb": 32.0,
+    "dpo_gb": 123.2696123123169,
+    "simpo_gb": 110.2310962677002,
+    "dpo_with_cached_ref_logps_gb": 110.2310962677002,
+    "saving_percent": 10.577234567414886,
+    "weight_memory_saving_percent": 50.0
+  },
+  "all_passed": true
+}
